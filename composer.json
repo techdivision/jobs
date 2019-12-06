@@ -1,7 +1,7 @@
 {
     "name": "techdivision/jobs",
     "type": "neos-plugin",
-    "description": "A configurable neos extension",
+    "description": "Package for correct schema.org JobPostings",
     "require": {
         "neos/neos": ">=4.3",
         "neos/fusion-afx": "*"
