@@ -1,0 +1,22 @@
+Neos:
+  Neos:
+    nodeTypes:
+      groups:
+        jobs:
+          position: 'end'
+          label: 'Jobs'
+    userInterface:
+      translation:
+        autoInclude:
+          TechDivision.Jobs:
+            - 'NodeTypes/*'
+            - 'Document/*'
+    fusion:
+      autoInclude:
+        TechDivision.Jobs: true
+TechDivision:
+  Jobs:
+    # http://schema.org/MonetaryAmount#currency
+    baseSalaryCurrency: 'EUR'
+    # http://schema.org/QuantitativeValue#unitText
+    baseSalaryUnit: 'YEAR'

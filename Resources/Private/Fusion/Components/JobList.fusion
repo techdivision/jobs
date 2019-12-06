@@ -1,0 +1,50 @@
+prototype(TechDivision.Jobs:Component.JobList) < prototype(Neos.Fusion:Component) {
+
+    //api
+    hideJobPostingDescription = ''
+    hideJobPostingEmploymentType = ''
+    hideJobPostingPosition = ''
+    hideJobPostingLocation = ''
+    allAvailableJobPostings = ''
+
+    jobListItemRenderer = Neos.Fusion:Loop {
+        items = ${allAvailableJobPostings}
+        itemName = 'jobPosting'
+        itemRenderer = TechDivision.Jobs:Component.JobListBody {
+            jobTitle = ${q(jobPosting).property('jobPostingTitle')}
+            jobDescription = ${q(jobPosting).property('jobPostingDescription')}
+            jobEmploymentType = ${q(jobPosting).property('jobPostingEmploymentType')}
+            jobPosition = ${q(jobPosting).property('jobPostingPosition')}
+            @context.jobLocations = ${q(jobPosting).property('jobPostingLocation')}
+            hideJobPostingTitle = ${q(node).property('hideJobPostingTitle')}
+            hideJobPostingDescription = ${q(node).property('hideJobPostingDescription')}
+            hideJobPostingPosition = ${q(node).property('hideJobPostingPosition')}
+            hideJobPostingLocation = ${q(node).property('hideJobPostingLocation')}
+            hideJobPostingEmploymentType = ${q(node).property('hideJobPostingEmploymentType')}
+            node = ${jobPosting}
+        }
+    }
+
+    renderer = afx`
+        <TechDivision.Jobs:TableAugmenter>
+            <table>
+                <thead>
+                    <tr>
+                        <th>{I18n.translate('label.tableHeading.jobPostingTitle', '', [], 'NodeTypes/JobList', 'TechDivision.Jobs')}</th>
+                        <th @if.enabled={!props.hideJobPostingEmploymentType}>{I18n.translate('label.tableHeading.jobPostingEmploymentType', '', [], 'NodeTypes/JobList', 'TechDivision.Jobs')}</th>
+                        <th @if.enabled={!props.hideJobPostingLocation} >{I18n.translate('label.tableHeading.jobPostingLocation', '', [], 'NodeTypes/JobList', 'TechDivision.Jobs')}</th>
+                        <th @if.enabled={!props.hideJobPostingPosition} >{I18n.translate('label.tableHeading.jobPostingPosition', '', [], 'NodeTypes/JobList', 'TechDivision.Jobs')}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {props.jobListItemRenderer}
+                </tbody>
+            </table>
+        </TechDivision.Jobs:TableAugmenter>
+    `
+}
+
+
+
+
+

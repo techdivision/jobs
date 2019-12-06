@@ -1,0 +1,14 @@
+{
+    "name": "techdivision/jobs",
+    "type": "neos-plugin",
+    "description": "A configurable neos extension",
+    "require": {
+        "neos/neos": ">=4.3",
+        "neos/fusion-afx": "*"
+    },
+    "extra": {
+        "neos": {
+            "package-key": "TechDivision.Jobs"
+        }
+    }
+}

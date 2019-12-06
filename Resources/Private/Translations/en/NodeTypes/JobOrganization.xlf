@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Jobs" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.organization" xml:space="preserve">
+                <source>Organization</source>
+            </trans-unit>
+            <trans-unit id="groups.organization" xml:space="preserve">
+                <source>Organization</source>
+            </trans-unit>        
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Organization</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationName" xml:space="preserve">
+                <source>Organization</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationName.ui.help.message" xml:space="preserve">
+                <source>Organization offering the job position.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

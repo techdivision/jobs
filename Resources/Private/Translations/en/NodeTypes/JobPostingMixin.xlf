@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Jobs" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.jobSettings" xml:space="preserve">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="groups.jobSettings" xml:space="preserve">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingTitle" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingTitle.ui.help.message" xml:space="preserve">
+                <source>The title of the job.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingDescription" xml:space="preserve">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingDescription.ui.help.message" xml:space="preserve">
+                <source>The description of the job.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingPosition" xml:space="preserve">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingPosition.ui.help.message" xml:space="preserve">
+                <source>e.g. software developer</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationName" xml:space="preserve">
+                <source>Organization</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationName.ui.help.message" xml:space="preserve">
+                <source>Organization offering the job position.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingLocation" xml:space="preserve">
+                <source>Place</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingLocation.ui.help.message" xml:space="preserve">
+                <source>A (typically single) geographic location associated with the job position. Needs to be created in Job locations.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingBaseSalary" xml:space="preserve">
+                <source>Base salary</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingBaseSalary.ui.help.message" xml:space="preserve">
+                <source>The base salary of the job or of an employee in an employee role.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType" xml:space="preserve">
+                <source>Employment type</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.ui.help.message" xml:space="preserve">
+                <source>Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingValidThrough" xml:space="preserve">
+                <source>Valid through</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingValidThrough.ui.help.message" xml:space="preserve">
+                <source>The date until the job is valid. For example the end of an offer, salary period, or a period of opening hours.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,21 @@
+prototype(TechDivision.Jobs:Component.JobLocationMicrodata) < prototype(Neos.Fusion:Component) {
+
+    jobLocationTitle = ${q(jobLocationNode).property('jobLocationTitle')}
+    jobLocationStreetAddress = ${q(jobLocationNode).property('jobLocationStreetAddress')}
+    jobLocationAddressLocality = ${q(jobLocationNode).property('jobLocationAddressLocality')}
+    jobLocationPostalCode = ${q(jobLocationNode).property('jobLocationPostalCode')}
+    jobLocationAddressRegion = ${q(jobLocationNode).property('jobLocationAddressRegion')}
+
+    renderer = afx`
+        <span itemprop="jobLocation" itemscope itemtype="http://schema.org/Place">
+            <meta itemprop="name" content={props.jobLocationTitle} />
+            <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content={props.jobLocationStreetAddress} />
+                <meta itemprop="addressLocality" content={props.jobLocationAddressLocality} />
+                <meta itemprop="postalCode" content={props.jobLocationPostalCode} />
+                <meta itemprop="addressRegion" content={props.jobLocationAddressRegion} />
+            </span>
+        </span>
+    `
+
+}

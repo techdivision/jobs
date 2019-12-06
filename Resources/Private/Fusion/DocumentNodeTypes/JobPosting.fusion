@@ -1,0 +1,7 @@
+prototype(TechDivision.Jobs:Document.JobPosting) < prototype(TechDivision.Jobs:Page) {
+    prototype(Neos.Neos:PrimaryContent).jobPostingMicroData {
+        condition = ${q(node).is('[instanceof TechDivision.Jobs:Document.JobPosting]')}
+        type = 'TechDivision.Jobs:Component.JobPosting'
+        @position = 'before default'
+    }
+}

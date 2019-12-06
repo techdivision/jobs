@@ -1,0 +1,56 @@
+'TechDivision.Jobs:JobList':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: i18n
+    group: 'jobs'
+    icon: 'icon-list-alt'
+    inspector:
+      tabs:
+        jobListSettings:
+          icon: 'icon-briefcase'
+          label: i18n
+          position: 1
+      groups:
+        jobListSettings:
+          icon: 'icon-briefcase'
+          label: i18n
+          position: 1
+          tab: 'jobListSettings'
+  properties:
+    hideJobPostingDescription:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'jobListSettings'
+          position: 'after hideJobPostingTitle'
+    hideJobPostingEmploymentType:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'jobListSettings'
+          position: 'after hideJobPostingDescription'
+    hideJobPostingPosition:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'jobListSettings'
+          position: 'after hideJobPostingEmploymentType'
+    hideJobPostingLocation:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'jobListSettings'
+          position: 'after hideJobPostingPosition'

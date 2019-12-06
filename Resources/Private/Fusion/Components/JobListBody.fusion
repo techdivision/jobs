@@ -1,0 +1,48 @@
+prototype(TechDivision.Jobs:Component.JobListBody) < prototype(Neos.Fusion:Component) {
+
+    //api
+    jobTitle = ''
+    jobDescription = ''
+    jobEmploymentType = ''
+    jobPosition = ''
+    jobLocations = ''
+    hideJobPostingDescription = ''
+    hideJobPostingEmploymentType = ''
+    hideJobPostingPosition = ''
+    hideJobPostingLocation = ''
+
+    aggregatedJobLocations = Neos.Fusion:Loop {
+        items = ${jobLocations}
+        itemName = 'node'
+        itemRenderer = Neos.Fusion:Component {
+            location = ${q(node).property('jobLocationTitle')}
+            renderer = afx`
+                <div>{props.location}</div>
+            `
+        }
+    }
+    node = ${node}
+
+    renderer = afx`
+        <TechDivision.Jobs:TableRowAugmenter>
+            <tr>
+                <td>
+                    <Neos.Neos:NodeLink node={props.node}>{props.jobTitle}</Neos.Neos:NodeLink>
+                    <div @if.enabled={!props.hideJobPostingDescription}>
+                        <Neos.Neos:NodeLink node={props.node}>{props.jobDescription}</Neos.Neos:NodeLink>
+                    </div>
+                </td>
+
+                <td @if.enabled={!props.hideJobPostingEmploymentType}>
+                    <div>{props.jobEmploymentType}</div>
+                </td>
+                <td @if.enabled={!props.hideJobPostingLocation}>
+                    {props.aggregatedJobLocations}
+                </td>
+                <td @if.enabled={!props.hideJobPostingPosition}>
+                    <div>{props.jobPosition}</div>
+                </td>
+            </tr>
+        </TechDivision.Jobs:TableRowAugmenter>
+    `
+}

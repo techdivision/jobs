@@ -1,0 +1,1 @@
+prototype(TechDivision.Jobs:Page) < prototype(Neos.Neos:Page)

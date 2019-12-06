@@ -1,0 +1,3 @@
+prototype(TechDivision.Jobs:TableAugmenter) < prototype(Neos.Fusion:Augmenter) {
+    class = ''
+}

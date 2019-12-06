@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Jobs" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.jobListSettings" xml:space="preserve">
+                <target xml:lang="de">Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="groups.jobListSettings" xml:space="preserve">
+                <target xml:lang="de">Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <target xml:lang="de">Stellenangebote</target>
+            </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Zeigt alle verfügbaren Stellenangebote an.</target>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingTitle" xml:space="preserve">
+                <target xml:lang="de">Stellenbezeichnung verbergen</target>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingDescription" xml:space="preserve">
+                <target xml:lang="de">Stellenbeschreibung verbergen</target>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingPosition" xml:space="preserve">
+                <target xml:lang="de">Position verbergen</target>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingLocation" xml:space="preserve">
+                <target xml:lang="de">Standort verbergen</target>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingEmploymentType" xml:space="preserve">
+                <target xml:lang="de">Beschäftigungsgrad verbergen</target>
+            </trans-unit>
+            <trans-unit id="label.tableHeading.jobPostingTitle" xml:space="preserve">
+                <target xml:lang="de">Stelle</target>
+            </trans-unit>
+            <trans-unit id="label.tableHeading.jobPostingEmploymentType" xml:space="preserve">
+                <target xml:lang="de">Beschäftigungsgrad</target>
+            </trans-unit>
+            <trans-unit id="label.tableHeading.jobPostingPosition" xml:space="preserve">
+                <target xml:lang="de">Position</target>
+            </trans-unit>
+            <trans-unit id="label.tableHeading.jobPostingLocation" xml:space="preserve">
+                <target xml:lang="de">Standort</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

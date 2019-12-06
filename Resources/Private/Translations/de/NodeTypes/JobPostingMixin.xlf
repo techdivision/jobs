@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Jobs" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.jobSettings" xml:space="preserve">
+                <target xml:lang="de">Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="groups.jobSettings" xml:space="preserve">
+                <target xml:lang="de">Einstellungen</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingTitle" xml:space="preserve">
+                <target xml:lang="de">Titel</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingTitle.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Titel der freien Stelle.</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingDescription" xml:space="preserve">
+                <target xml:lang="de">Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingDescription.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Beschreibung der freien Stelle.</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingPosition" xml:space="preserve">
+                <target xml:lang="de">Kategorie</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingPosition.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Kategorie der freien Stelle. Zum Beispiel Softwareentwicklung.</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationName" xml:space="preserve">
+                <target xml:lang="de">Organisation</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationName.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Organisation, die diese freie Stelle anbietet.</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingLocation" xml:space="preserve">
+                <target xml:lang="de">Standort</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingLocation.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Geographischer Standort der freien Stelle. Muss zuvor unter "Standorte" angelegt werden.</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingBaseSalary" xml:space="preserve">
+                <target xml:lang="de">Grundgehalt</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingBaseSalary.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Grundgehalt der freien Stelle.</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType" xml:space="preserve">
+                <target xml:lang="de">Dienstverhältnis</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Art der Anstellung. Zum Beispiel Vollzeit oder Teilzeit.</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingValidThrough" xml:space="preserve">
+                <target xml:lang="de">Gültig bis</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingValidThrough.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Gibt an, wie lange die freie Stelle zur Verfügung stehen soll.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

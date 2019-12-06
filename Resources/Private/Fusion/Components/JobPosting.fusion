@@ -1,0 +1,51 @@
+prototype(TechDivision.Jobs:Component.JobPosting) < prototype(Neos.Neos:ContentComponent) {
+
+    documentNode = ${documentNode}
+    node = ${node}
+
+    jobPostingTitle = ${q(documentNode).property('jobPostingTitle')}
+    jobPostingDescription = ${q(documentNode).property('jobPostingDescription')}
+    jobPostingHiringOrganizationName = ${q(documentNode).property('jobPostingHiringOrganizationName')}
+    jobPostingDatePosted = ${Date.format(documentNode.creationDateTime, 'Y-m-d')}
+    jobPostingBaseSalary = ${q(documentNode).property('jobPostingBaseSalary')}
+    jobPostingEmploymentType = ${q(documentNode).property('jobPostingEmploymentType')}
+    jobPostingValidThrough = ${Date.format(q(documentNode).property('jobPostingValidThrough'), 'Y-m-d')}
+    baseSalaryCurrency = ${Configuration.setting('TechDivision.Jobs.baseSalaryCurrency')}
+    baseSalaryUnit = ${Configuration.setting('TechDivision.Jobs.baseSalaryUnit')}
+
+    jobLocation = Neos.Fusion:Loop {
+        items = ${q(documentNode).property('jobPostingLocation') ? q(documentNode).property('jobPostingLocation') : []}
+        itemName = 'jobLocationNode'
+        itemRenderer = TechDivision.Jobs:Component.JobLocationMicrodata
+    }
+
+    selectedHiringOrganization = ${q(this.jobPostingHiringOrganizationName).property('jobPostingHiringOrganizationName')}
+
+    renderer = afx`
+        <div itemscope itemtype="http://schema.org/JobPosting" class="jobposting">
+            <h1 itemprop="title">
+                <Neos.Neos:Editable property="jobPostingTitle" />
+            </h1>
+            <div class="jobposting--description">
+                <Neos.Neos:Editable property="jobPostingDescription" />
+            </div>
+            <meta itemprop="datePosted" content={props.jobPostingDatePosted} @if.exists={props.jobPostingDatePosted} />
+            <meta itemprop="hiringOrganization" content={props.selectedHiringOrganization}  @if.exists={props.selectedHiringOrganization}/>
+            <meta itemprop="employmentType" content={props.jobPostingEmploymentType}  @if.exists={props.jobPostingEmploymentType}/>
+            <meta itemprop="validThrough" content={props.jobPostingValidThrough}  @if.exists={props.jobPostingValidThrough}/>
+
+            <span itemprop="baseSalary" itemscope itemtype="http://schema.org/MonetaryAmount" @if.exists={props.jobPostingBaseSalary}>
+                <meta itemprop="currency" content="{props.baseSalaryCurrency}" />
+                <span itemprop="value" itemscope itemtype="http://schema.org/QuantitativeValue">
+                    <meta itemprop="value" content="{props.jobPostingBaseSalary}" />
+                    <meta itemprop="unitText" content="{props.baseSalaryUnit}" />
+                </span>
+            </span>
+            <meta itemprop="employmentType" content={props.jobPostingEmploymentType} @if.exists={props.jobPostingEmploymentType} />
+            <meta itemprop="validThrough" content={props.jobPostingValidThrough}  @if.exists={props.jobPostingValidThrough} />
+
+            {props.jobLocation}
+        </div>
+    `
+}
+

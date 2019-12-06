@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Jobs" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Location</source>
+            </trans-unit>
+            <trans-unit id="tabs.locationData" xml:space="preserve">
+                <source>Location Data</source>
+            </trans-unit>
+            <trans-unit id="groups.locationData" xml:space="preserve">
+                <source>Location Data</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationTitle" xml:space="preserve">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationTitle.ui.help.message" xml:space="preserve">
+                <source>The name of the item.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationStreetAddress" xml:space="preserve">
+                <source>Street Address</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationStreetAddress.ui.help.message" xml:space="preserve">
+                <source>The street address. For example, 1600 Amphitheatre Pkwy.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationAddressLocality" xml:space="preserve">
+                <source>Address locality</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationAddressLocality.ui.help.message" xml:space="preserve">
+                <source>The locality in which the street address is, and which is in the region. For example, Mountain View.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationPostalCode" xml:space="preserve">
+                <source>Postal code</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationPostalCode.ui.help.message" xml:space="preserve">
+                <source>The postal code. For example, 94043.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationAddressRegion" xml:space="preserve">
+                <source>Address region</source>
+            </trans-unit>
+            <trans-unit id="properties.jobLocationAddressRegion.ui.help.message" xml:space="preserve">
+                <source>The region in which the locality is, and which is in the country. For example, California or another appropriate first-level Administrative division</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

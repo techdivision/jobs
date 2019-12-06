@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Jobs" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.jobListSettings" xml:space="preserve">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="groups.jobListSettings" xml:space="preserve">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Job list</source>
+            </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source>hides all available jobs.</source>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingTitle" xml:space="preserve">
+                <source>hide title</source>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingDescription" xml:space="preserve">
+                <source>hide description</source>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingPosition" xml:space="preserve">
+                <source>hide position</source>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingLocation" xml:space="preserve">
+                <source>hide location</source>
+            </trans-unit>
+            <trans-unit id="properties.hideJobPostingEmploymentType" xml:space="preserve">
+                <source>hide employment type</source>
+            </trans-unit>
+            <trans-unit id="label.tableHeading.jobPostingTitle" xml:space="preserve">
+                <source>Job</source>
+            </trans-unit>
+            <trans-unit id="label.tableHeading.jobPostingEmploymentType" xml:space="preserve">
+                <source>Employment Type</source>
+            </trans-unit>
+            <trans-unit id="label.tableHeading.jobPostingPosition" xml:space="preserve">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="label.tableHeading.jobPostingLocation" xml:space="preserve">
+                <source>Location</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

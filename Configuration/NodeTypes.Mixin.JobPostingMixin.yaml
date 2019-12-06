@@ -1,0 +1,140 @@
+'TechDivision.Jobs:JobPostingMixin':
+  abstract: true
+  ui:
+    inspector:
+      tabs:
+        jobSettings:
+          icon: 'icon-briefcase'
+          label: i18n
+          position: 1
+      groups:
+        jobSettings:
+          icon: 'icon-briefcase'
+          label: i18n
+          position: 1
+          tab: 'jobSettings'
+  options:
+    TtreeLinkedData:Generator:
+      default:
+        context:
+          jobLocations: "${q(node).property('jobPostingLocation')}"
+          nextJobLocation: "${jobLocations ? q(jobLocations).get() : null}"
+          jobOrganization: "${q(node).property('jobPostingHiringOrganizationName')}"
+        fragment:
+          '@context': http://schema.org
+          '@type': JobPosting
+          title: "${q(node).property('jobPostingTitle')}"
+          description: "${String.stripTags(String.cropAtSentence(q(node).property('jobPostingDescription'), 180, '...'))}"
+          datePosted: "${Date.format(node.creationDateTime, 'Y-m-d')}"
+          hiringOrganization:
+            '@type': Organization
+            name: "${q(jobOrganization).property('jobPostingHiringOrganizationName')}"
+          jobLocation: "${nextJobLocation ? LinkedData.List(nextJobLocation, preset, false) : null}"
+          baseSalary:
+            '@type': MonetaryAmount
+            currency: "EUR"
+            value:
+              '@type': QuantitativeValue
+              value: "${q(node).property('jobPostingBaseSalary')}"
+              unitText: "YEAR"
+          employmentType: "${q(node).property('jobPostingEmploymentType')}"
+          validThrough: "${Date.format(q(node).property('jobPostingValidThrough'), 'Y-m-d')}"
+  properties:
+    jobPostingTitle:
+      type: string
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        inlineEditable: true
+        inspector:
+          group: 'jobSettings'
+          position: 1
+          editorOptions:
+            required: true
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+    jobPostingDescription:
+      type: string
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        inlineEditable: true
+        inspector:
+          group: 'jobSettings'
+          position: 'after jobPostingTitle'
+          editor: 'Neos.Neos/Inspector/Editors/TextAreaEditor'
+          editorOptions:
+            required: true
+            rows: 7
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+    jobPostingPosition:
+      type: string
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        inspector:
+          group: 'jobSettings'
+          position: 'after jobPostingDescription'
+    jobPostingHiringOrganizationName:
+      type: references
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        inspector:
+          group: 'jobSettings'
+          position: 'after jobPostingPosition'
+          editorOptions:
+            required: true
+            nodeTypes: ['TechDivision.Jobs:JobOrganization']
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+    jobPostingLocation:
+      type: references
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        inspector:
+          group: 'jobSettings'
+          position: 'after jobPostingHiringOrganizationName'
+          editorOptions:
+            required: true
+            nodeTypes: ['TechDivision.Jobs:JobLocation']
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []
+    jobPostingBaseSalary:
+      type: string
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        inspector:
+          group: 'jobSettings'
+          position: 'after jobPostingLocation'
+    jobPostingEmploymentType:
+      type: string
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        inspector:
+          group: 'jobSettings'
+          position: 'after jobPostingbaseSalary'
+    jobPostingValidThrough:
+      type: DateTime
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        inspector:
+          group: 'jobSettings'
+          position: 'after jobPostingEemploymentType'
+          editorOptions:
+            format: 'Y-m-d'
+      validation:
+        'Neos.Neos/Validation/NotEmptyValidator': []

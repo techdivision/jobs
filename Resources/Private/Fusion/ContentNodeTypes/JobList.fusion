@@ -1,0 +1,30 @@
+prototype(TechDivision.Jobs:JobList) < prototype(Neos.Neos:ContentComponent) {
+
+    hideJobPostingDescription = ${q(node).property('hideJobPostingDescription')}
+    hideJobPostingEmploymentType = ${q(node).property('hideJobPostingEmploymentType')}
+    hideJobPostingPosition = ${q(node).property('hideJobPostingPosition')}
+    hideJobPostingLocation = ${q(node).property('hideJobPostingLocation')}
+    @context.allAvailableJobPostings = ${q(site).find('[instanceof TechDivision.Jobs:Document.JobPosting]').get()}
+
+    renderer = afx`
+        <TechDivision.Jobs:Component.JobList
+            hideJobPostingDescription={props.hideJobPostingDescription}
+            hideJobPostingEmploymentType={props.hideJobPostingEmploymentType}
+            hideJobPostingPosition={props.hideJobPostingPosition}
+            hideJobPostingLocation={props.hideJobPostingLocation}
+            allAvailableJobPostings={props.allAvailableJobPostings}
+        />
+    `
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.nodeTypeTag('TechDivision.Jobs:JobPosting')}
+            2 = ${Neos.Caching.nodeTypeTag('TechDivision.Jobs:JobOrganization')}
+            2 = ${Neos.Caching.nodeTypeTag('TechDivision.Jobs:JobLocation')}
+        }
+    }
+}
