@@ -1,9 +1,13 @@
 # TechDivision.Jobs
-
 This is a package for integrating jobs into your site.  
 In order to be properly indexed as jobs in google (and other search engines), job semantics need to be correct.  
 
 This is a good read to start with: https://developers.google.com/search/docs/data-types/job-posting 
+
+### Installation
+TechDivision.Jobs is available via packagist. Add `"techdivision/jobs" : "~1.0"` to the require section of the composer.json
+or run `composer require techdivision/jobs`.  
+
 
 ## What this package offers
 You can add the following NodeTypes:
