@@ -26,7 +26,7 @@ prototype(TechDivision.Jobs:Component.JobPosting) < prototype(Neos.Neos:ContentC
             <h1 itemprop="title">
                 <Neos.Neos:Editable property="jobPostingTitle" />
             </h1>
-            <div class="jobposting--description">
+            <div itemprop="description" class="jobposting--description">
                 <Neos.Neos:Editable property="jobPostingDescription" />
             </div>
             <meta itemprop="datePosted" content={props.jobPostingDatePosted} @if.exists={props.jobPostingDatePosted} />
@@ -35,14 +35,12 @@ prototype(TechDivision.Jobs:Component.JobPosting) < prototype(Neos.Neos:ContentC
             <meta itemprop="validThrough" content={props.jobPostingValidThrough}  @if.exists={props.jobPostingValidThrough}/>
 
             <span itemprop="baseSalary" itemscope itemtype="http://schema.org/MonetaryAmount" @if.exists={props.jobPostingBaseSalary}>
-                <meta itemprop="currency" content="{props.baseSalaryCurrency}" />
+                <meta itemprop="currency" content={props.baseSalaryCurrency} />
                 <span itemprop="value" itemscope itemtype="http://schema.org/QuantitativeValue">
-                    <meta itemprop="value" content="{props.jobPostingBaseSalary}" />
-                    <meta itemprop="unitText" content="{props.baseSalaryUnit}" />
+                    <meta itemprop="value" content={props.jobPostingBaseSalary} />
+                    <meta itemprop="unitText" content={props.baseSalaryUnit} />
                 </span>
             </span>
-            <meta itemprop="employmentType" content={props.jobPostingEmploymentType} @if.exists={props.jobPostingEmploymentType} />
-            <meta itemprop="validThrough" content={props.jobPostingValidThrough}  @if.exists={props.jobPostingValidThrough} />
 
             {props.jobLocation}
         </div>
