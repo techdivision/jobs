@@ -27,13 +27,13 @@
                 <target xml:lang="de">Standort verbergen</target>
             </trans-unit>
             <trans-unit id="properties.hideJobPostingEmploymentType" xml:space="preserve">
-                <target xml:lang="de">Beschäftigungsgrad verbergen</target>
+                <target xml:lang="de">Beschäftigungsart verbergen</target>
             </trans-unit>
             <trans-unit id="label.tableHeading.jobPostingTitle" xml:space="preserve">
                 <target xml:lang="de">Stelle</target>
             </trans-unit>
             <trans-unit id="label.tableHeading.jobPostingEmploymentType" xml:space="preserve">
-                <target xml:lang="de">Beschäftigungsgrad</target>
+                <target xml:lang="de">Beschäftigungsart</target>
             </trans-unit>
             <trans-unit id="label.tableHeading.jobPostingPosition" xml:space="preserve">
                 <target xml:lang="de">Position</target>
