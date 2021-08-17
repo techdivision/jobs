@@ -6,7 +6,7 @@
                 <target xml:lang="de">Karriere</target>
             </trans-unit>
             <trans-unit id="ui.help.message" xml:space="preserve">
-                <target xml:lang="de">Einstiegspunkt für alle Karriere spezifischen NodeTypes.</target>
+                <target xml:lang="de">Einstiegspunkt für alle karrierespezifischen NodeTypes.</target>
             </trans-unit>
             <trans-unit id="tabs.settings" xml:space="preserve">
                 <target xml:lang="de">Einstellungen</target>
