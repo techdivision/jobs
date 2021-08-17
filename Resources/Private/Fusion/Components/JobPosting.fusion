@@ -8,7 +8,7 @@ prototype(TechDivision.Jobs:Component.JobPosting) < prototype(Neos.Neos:ContentC
     jobPostingHiringOrganizationName = ${q(documentNode).property('jobPostingHiringOrganizationName')}
     jobPostingDatePosted = ${Date.format(documentNode.creationDateTime, 'Y-m-d')}
     jobPostingBaseSalary = ${q(documentNode).property('jobPostingBaseSalary')}
-    jobPostingEmploymentType = ${q(documentNode).property('jobPostingEmploymentType')}
+    jobPostingEmploymentType = ${Json.stringify(q(documentNode).property('jobPostingEmploymentType'))}
     jobPostingValidThrough = ${Date.format(q(documentNode).property('jobPostingValidThrough'), 'Y-m-d')}
     baseSalaryCurrency = ${Configuration.setting('TechDivision.Jobs.baseSalaryCurrency')}
     baseSalaryUnit = ${Configuration.setting('TechDivision.Jobs.baseSalaryUnit')}
