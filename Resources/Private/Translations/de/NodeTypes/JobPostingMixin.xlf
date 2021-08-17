@@ -50,6 +50,33 @@
             <trans-unit id="properties.jobPostingEmploymentType.ui.help.message" xml:space="preserve">
                 <target xml:lang="de">Art der Anstellung. Zum Beispiel Vollzeit oder Teilzeit.</target>
             </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.FULL_TIME" xml:space="preserve">
+                <target xml:lang="de">Vollzeit</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.PART_TIME" xml:space="preserve">
+                <target xml:lang="de">Teilzeit</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.CONTRACTOR" xml:space="preserve">
+                <target xml:lang="de">Subunternehmer</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.TEMPORARY" xml:space="preserve">
+                <source>Zeitarbeit</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.INTERN" xml:space="preserve">
+                <source>Praktikum</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.VOLUNTEER" xml:space="preserve">
+                <source>Freiwilligendienst</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.PER_DIEM" xml:space="preserve">
+                <source>Tagelöhner</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.OTHER" xml:space="preserve">
+                <source>Sontiges</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingValidThrough" xml:space="preserve">
+                <source>Valid through</source>
+            </trans-unit>
             <trans-unit id="properties.jobPostingValidThrough" xml:space="preserve">
                 <target xml:lang="de">Gültig bis</target>
             </trans-unit>
