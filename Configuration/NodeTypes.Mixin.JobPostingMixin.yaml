@@ -117,6 +117,7 @@
           group: 'jobSettings'
           position: 'after jobPostingLocation'
     jobPostingEmploymentType:
+      defaultValue: 'FULL_TIME'
       type: string
       ui:
         label: i18n
@@ -125,6 +126,26 @@
         inspector:
           group: 'jobSettings'
           position: 'after jobPostingbaseSalary'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            multiple: false
+            values:
+              'FULL_TIME':
+                label: i18n
+              'PART_TIME':
+                label: i18n
+              'CONTRACTOR':
+                label: i18n
+              'TEMPORARY':
+                label: i18n
+              'INTERN':
+                label: i18n
+              'VOLUNTEER':
+                label: i18n
+              'PER_DIEM':
+                label: i18n
+              'OTHER':
+                label: i18n
     jobPostingValidThrough:
       type: DateTime
       ui:
