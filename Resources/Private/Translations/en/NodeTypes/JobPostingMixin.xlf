@@ -50,6 +50,30 @@
             <trans-unit id="properties.jobPostingEmploymentType.ui.help.message" xml:space="preserve">
                 <source>Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).</source>
             </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.FULL_TIME" xml:space="preserve">
+                <source>Full-time</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.PART_TIME" xml:space="preserve">
+                <source>Part-time</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.CONTRACTOR" xml:space="preserve">
+                <source>Contractor</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.TEMPORARY" xml:space="preserve">
+                <source>Temporary work</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.INTERN" xml:space="preserve">
+                <source>Internship</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.VOLUNTEER" xml:space="preserve">
+                <source>Volunteer</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.PER_DIEM" xml:space="preserve">
+                <source>Per diem</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingEmploymentType.selectBoxEditor.values.OTHER" xml:space="preserve">
+                <source>Other</source>
+            </trans-unit>
             <trans-unit id="properties.jobPostingValidThrough" xml:space="preserve">
                 <source>Valid through</source>
             </trans-unit>
