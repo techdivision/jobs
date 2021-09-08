@@ -51,3 +51,8 @@ An application form based on [neos/form-builder](https://github.com/neos/formbui
 * [techdivision/form-encryption](https://github.com/techdivision/form-encryption)  
 PGP/GPG form encryption to meet data protection standards 
 
+## Update notes
+
+### Breaking changes for update from 1.x.x to 2.x.x
+
+The content of the property `jobPostingEmploymentType` will be lost due to the change of a variable text input to a predefined select.
