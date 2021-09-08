@@ -6,10 +6,10 @@
                 <target xml:lang="de">Standort</target>
             </trans-unit>
             <trans-unit id="tabs.locationData" xml:space="preserve">
-                <target xml:lang="de">Location-Einstellungen</target>
+                <target xml:lang="de">Standort-Einstellungen</target>
             </trans-unit>
             <trans-unit id="groups.locationData" xml:space="preserve">
-                <target xml:lang="de">Location-Einstellungen</target>
+                <target xml:lang="de">Standort-Einstellungen</target>
             </trans-unit>
             <trans-unit id="properties.jobLocationTitle" xml:space="preserve">
                 <target xml:lang="de">Titel</target>
@@ -21,25 +21,25 @@
                 <target xml:lang="de">Straße</target>
             </trans-unit>
             <trans-unit id="properties.jobLocationStreetAddress.ui.help.message" xml:space="preserve">
-                <target xml:lang="de">Adresse der Straße. Zum Beispiel Max-Mustermann-Straße 5.</target>
+                <target xml:lang="de">Straße und Hausnummer des Standorts, zum Beispiel Max-Mustermann-Straße 5.</target>
             </trans-unit>
             <trans-unit id="properties.jobLocationAddressLocality" xml:space="preserve">
                 <target xml:lang="de">Stadt</target>
             </trans-unit>
             <trans-unit id="properties.jobLocationAddressLocality.ui.help.message" xml:space="preserve">
-                <target xml:lang="de">Die Stadt in der sich die Straßenadresse befindet.</target>
+                <target xml:lang="de">Stadt in der sich der Standort befindet.</target>
             </trans-unit>
             <trans-unit id="properties.jobLocationPostalCode" xml:space="preserve">
                 <target xml:lang="de">Postleitzahl</target>
             </trans-unit>
             <trans-unit id="properties.jobLocationPostalCode.ui.help.message" xml:space="preserve">
-                <target xml:lang="de">Die Postleitzahl. Zum Beispiel 83059.</target>
+                <target xml:lang="de">Die Postleitzahl des Standorts, zum Beispiel 83059.</target>
             </trans-unit>
             <trans-unit id="properties.jobLocationAddressRegion" xml:space="preserve">
                 <target xml:lang="de">Region</target>
             </trans-unit>
             <trans-unit id="properties.jobLocationAddressRegion.ui.help.message" xml:space="preserve">
-                <target xml:lang="de">Die Regin in der sich die Stadt befindet. Zum Beispiel Bayern.</target>
+                <target xml:lang="de">Die Region in der sich der Standort befindet, zum Beispiel Bayern.</target>
             </trans-unit>
         </body>
     </file>

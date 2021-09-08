@@ -6,7 +6,7 @@
                 <target xml:lang="de">Stellenanzeige</target>
             </trans-unit>
             <trans-unit id="ui.help.message" xml:space="preserve">
-                <target xml:lang="de">Eine Stellenanzeige zum anzeigen von freien Stellen.</target>
+                <target xml:lang="de">Inhaltstyp zum Anzeigen von freien Stellen.</target>
             </trans-unit>
         </body>
     </file>
