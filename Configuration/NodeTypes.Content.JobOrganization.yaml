@@ -18,6 +18,14 @@
           label: i18n
           position: 1
           tab: 'organization'
+  options:
+    TtreeLinkedData:Generator:
+      default:
+        fragment:
+          '@context': http://schema.org
+          '@type': Organization
+          name: "${q(node).property('jobPostingHiringOrganizationName')}"
+          logo: "${q(node).property('jobPostingHiringOrganizationLogo')}"
   properties:
     jobPostingHiringOrganizationName:
       type: string
@@ -32,3 +40,10 @@
             required: true
       validation:
         'Neos.Neos/Validation/NotEmptyValidator': []
+    jobPostingHiringOrganizationLogo:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: i18n
+        inspector:
+          group: 'organization'
+          postion: 'after jobPostingHiringOrganizationName'

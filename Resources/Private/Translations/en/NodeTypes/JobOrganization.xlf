@@ -12,10 +12,16 @@
                 <source>Organization</source>
             </trans-unit>
             <trans-unit id="properties.jobPostingHiringOrganizationName" xml:space="preserve">
-                <source>Organization</source>
+                <source>Name</source>
             </trans-unit>
             <trans-unit id="properties.jobPostingHiringOrganizationName.ui.help.message" xml:space="preserve">
-                <source>Organization offering the job position.</source>
+                <source>Organization name offering the job position.</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationLogo" xml:space="preserve">
+                <source>Logo</source>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationLogo.ui.help.message" xml:space="preserve">
+                <source>An associated logo.</source>
             </trans-unit>
         </body>
     </file>

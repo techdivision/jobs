@@ -1,0 +1,22 @@
+prototype(TechDivision.Jobs:Component.JobOrganizationMicrodata) < prototype(Neos.Fusion:Component) {
+
+    // API
+    @context.jobOrganizationNode = ${this.jobOrganizationNode}
+
+    jobOrganizationName = ${q(jobOrganizationNode).property('jobPostingHiringOrganizationName')}
+    jobOrganizationLogo = Neos.Neos:ImageUri {
+        asset = ${q(jobOrganizationNode).property('jobPostingHiringOrganizationLogo')}
+    }
+    jobOrganizationSameAs = Neos.Neos:NodeUri {
+        node = ${site}
+        absolute = ${true}
+    }
+
+    renderer = afx`
+        <span itemprop="hiringOrganization" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name" content={props.jobOrganizationName} />
+            <meta itemprop="sameAs" content={props.jobOrganizationSameAs} @if.exists={props.jobOrganizationSameAs}/>
+            <meta itemprop="logo" content={props.jobOrganizationLogo} @if.exists={props.jobOrganizationLogo}/>
+        </span>
+    `
+}
