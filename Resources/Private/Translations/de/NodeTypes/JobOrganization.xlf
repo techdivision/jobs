@@ -12,10 +12,16 @@
                 <target xml:lang="de">Organisation</target>
             </trans-unit>
             <trans-unit id="properties.jobPostingHiringOrganizationName" xml:space="preserve">
-                <target xml:lang="de">Organisation</target>
+                <target xml:lang="de">Name</target>
             </trans-unit>
             <trans-unit id="properties.jobPostingHiringOrganizationName.ui.help.message" xml:space="preserve">
                 <target xml:lang="de">Name der Organisation, die diese freie Stelle anbietet.</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationLogo" xml:space="preserve">
+                <target xml:lang="de">Logo</target>
+            </trans-unit>
+            <trans-unit id="properties.jobPostingHiringOrganizationLogo.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Ein zugehöriges Logo.</target>
             </trans-unit>
         </body>
     </file>

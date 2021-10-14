@@ -5,10 +5,10 @@ prototype(TechDivision.Jobs:Component.JobPosting) < prototype(Neos.Neos:ContentC
 
     jobPostingTitle = ${q(documentNode).property('jobPostingTitle')}
     jobPostingDescription = ${q(documentNode).property('jobPostingDescription')}
-    jobPostingHiringOrganizationName = ${q(documentNode).property('jobPostingHiringOrganizationName')}
     jobPostingDatePosted = ${Date.format(documentNode.creationDateTime, 'Y-m-d')}
     jobPostingBaseSalary = ${q(documentNode).property('jobPostingBaseSalary')}
-    jobPostingEmploymentType = ${Json.stringify(q(documentNode).property('jobPostingEmploymentType'))}
+    jobPostingEmploymentType = ${(q(documentNode).property('jobPostingEmploymentType')) ? Array.length((q(documentNode).property('jobPostingEmploymentType'))) > 0 ? Json.stringify(q(documentNode).property('jobPostingEmploymentType')) : null : null}
+    jobPostingOrganization = ${q(documentNode).property('jobPostingHiringOrganizationName')}
     jobPostingValidThrough = ${Date.format(q(documentNode).property('jobPostingValidThrough'), 'Y-m-d')}
     baseSalaryCurrency = ${Configuration.setting('TechDivision.Jobs.baseSalaryCurrency')}
     baseSalaryUnit = ${Configuration.setting('TechDivision.Jobs.baseSalaryUnit')}
@@ -19,7 +19,9 @@ prototype(TechDivision.Jobs:Component.JobPosting) < prototype(Neos.Neos:ContentC
         itemRenderer = TechDivision.Jobs:Component.JobLocationMicrodata
     }
 
-    selectedHiringOrganization = ${q(this.jobPostingHiringOrganizationName).property('jobPostingHiringOrganizationName')}
+    jobPostingHiringOrganization = TechDivision.Jobs:Component.JobOrganizationMicrodata {
+        jobOrganizationNode = ${q(documentNode).property('jobPostingHiringOrganizationName')}
+    }
 
     renderer = afx`
         <div itemscope itemtype="http://schema.org/JobPosting" class="jobposting">
@@ -30,9 +32,11 @@ prototype(TechDivision.Jobs:Component.JobPosting) < prototype(Neos.Neos:ContentC
                 <Neos.Neos:Editable property="jobPostingDescription" />
             </div>
             <meta itemprop="datePosted" content={props.jobPostingDatePosted} @if.exists={props.jobPostingDatePosted} />
-            <meta itemprop="hiringOrganization" content={props.selectedHiringOrganization}  @if.exists={props.selectedHiringOrganization}/>
             <meta itemprop="employmentType" content={props.jobPostingEmploymentType}  @if.exists={props.jobPostingEmploymentType}/>
             <meta itemprop="validThrough" content={props.jobPostingValidThrough}  @if.exists={props.jobPostingValidThrough}/>
+
+            {props.jobPostingHiringOrganization}
+            {props.jobLocation}
 
             <span itemprop="baseSalary" itemscope itemtype="http://schema.org/MonetaryAmount" @if.exists={props.jobPostingBaseSalary}>
                 <meta itemprop="currency" content={props.baseSalaryCurrency} />
@@ -41,8 +45,6 @@ prototype(TechDivision.Jobs:Component.JobPosting) < prototype(Neos.Neos:ContentC
                     <meta itemprop="unitText" content={props.baseSalaryUnit} />
                 </span>
             </span>
-
-            {props.jobLocation}
         </div>
     `
 }

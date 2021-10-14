@@ -80,7 +80,7 @@
           group: 'jobSettings'
           position: 'after jobPostingDescription'
     jobPostingHiringOrganizationName:
-      type: references
+      type: reference
       ui:
         label: i18n
         help:
