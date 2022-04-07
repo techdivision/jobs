@@ -24,12 +24,10 @@
           '@context': http://schema.org
           '@type': JobPosting
           title: "${q(node).property('jobPostingTitle')}"
-          description: "${String.stripTags(String.cropAtSentence(q(node).property('jobPostingDescription'), 180, '...'))}"
+          description: "${q(node).property('jobPostingDescription')}"
           datePosted: "${Date.format(node.creationDateTime, 'Y-m-d')}"
-          hiringOrganization:
-            '@type': Organization
-            name: "${q(jobOrganization).property('jobPostingHiringOrganizationName')}"
-          jobLocation: "${nextJobLocation ? LinkedData.List(nextJobLocation, preset, false) : null}"
+          hiringOrganization: "${jobOrganization && LinkedData.item(jobOrganization, preset, false)}"
+          jobLocation: "${nextJobLocation && LinkedData.List(nextJobLocation, preset, false)}"
           baseSalary:
             '@type': MonetaryAmount
             currency: "EUR"
@@ -37,7 +35,7 @@
               '@type': QuantitativeValue
               value: "${q(node).property('jobPostingBaseSalary')}"
               unitText: "YEAR"
-          employmentType: "Json.stringify(${q(node).property('jobPostingEmploymentType')})"
+          employmentType: "${Json.stringify(q(node).property('jobPostingEmploymentType'))}"
           validThrough: "${Date.format(q(node).property('jobPostingValidThrough'), 'Y-m-d')}"
   properties:
     jobPostingTitle:

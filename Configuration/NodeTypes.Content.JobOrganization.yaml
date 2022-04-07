@@ -21,11 +21,13 @@
   options:
     TtreeLinkedData:Generator:
       default:
+        context:
+          organizationLogo: "${q(node).property('jobPostingHiringOrganizationLogo')}"
         fragment:
           '@context': http://schema.org
           '@type': Organization
           name: "${q(node).property('jobPostingHiringOrganizationName')}"
-          logo: "${q(node).property('jobPostingHiringOrganizationLogo')}"
+          logo: "${organizationLogo && Neos.Link.resolveAssetUri('asset://' + organizationLogo.identifier)}"
   properties:
     jobPostingHiringOrganizationName:
       type: string
