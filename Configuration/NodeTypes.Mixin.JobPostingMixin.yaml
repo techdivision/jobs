@@ -36,7 +36,7 @@
               value: "${q(node).property('jobPostingBaseSalary')}"
               unitText: "YEAR"
           employmentType: "${Json.stringify(q(node).property('jobPostingEmploymentType'))}"
-          validThrough: "${Date.format(q(node).property('jobPostingValidThrough'), 'Y-m-d')}"
+          validThrough: "${q(node).property('jobPostingValidThrough') && Date.format(q(node).property('jobPostingValidThrough'), 'Y-m-d')}"
   properties:
     jobPostingTitle:
       type: string
@@ -155,5 +155,3 @@
           position: 'after jobPostingEemploymentType'
           editorOptions:
             format: 'Y-m-d'
-      validation:
-        'Neos.Neos/Validation/NotEmptyValidator': []
